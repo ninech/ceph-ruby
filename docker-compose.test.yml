@@ -2,8 +2,7 @@ version: '2'
 services:
   app:
     build: .
-    volumes:
-      - .:/app
+    command: bundle exec rspec
     depends_on:
       - ceph
     networks:
